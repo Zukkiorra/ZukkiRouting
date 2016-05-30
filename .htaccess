@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /AnimeManga
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#this worked on linux
+#RewriteRule ^(.+)$ index.php?uri=$1 [QSA, L]
+#this worked on windows xampp
+RewriteRule ^([0-9a-zA-Z-]+)?$ /index.php [QSA,L]
